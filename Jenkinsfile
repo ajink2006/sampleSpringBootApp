@@ -20,6 +20,13 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            def scannerHome = tool 'SonarQube Scanner 2.9';
+                withSonarQubeEnv('My SonarQube Server') {
+                sh "${scannerHome}/bin/sonar-scanner"
+            }
+        }
+
         stage ('Deploy App') {
 
             steps {
