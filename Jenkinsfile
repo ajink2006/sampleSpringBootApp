@@ -21,7 +21,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 script {
-                    mvnHome = tool name: 'maven_3_6_1', type: 'maven'
+                    mvnHome = 'maven_3_6_1'
                 }
                 withSonarQubeEnv('SonarQube') {
                     sh "${mvnHome}/bin/mvn sonar:sonar"
