@@ -50,4 +50,11 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/T3kDvHE2OyXiuQFrD6wn/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
